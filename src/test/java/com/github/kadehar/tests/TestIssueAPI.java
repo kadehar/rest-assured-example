@@ -9,7 +9,7 @@ import static org.hamcrest.Matchers.is;
 public class TestIssueAPI extends TestBase {
     @Test
     void checkIssueByStandardExtractableResponse() {
-        Issue issue = apiSteps.standardRequestWithExtractableResponse(12);
+        Issue issue = apiSteps.standardRequestWithExtractableResponse(23);
 
         assertThat(issue.getTitle(),is(TITLE));
         assertThat(issue.getAssignee().getLogin(), is(ASSIGNEE));
@@ -19,7 +19,7 @@ public class TestIssueAPI extends TestBase {
 
     @Test
     void checkIssueByExtractableResponse() {
-        Issue issue = apiSteps.requestWithExtractableResponse(12);
+        Issue issue = apiSteps.requestWithExtractableResponse(23);
 
         assertThat(issue.getTitle(),is(TITLE));
         assertThat(issue.getAssignee().getLogin(), is(ASSIGNEE));
@@ -29,13 +29,13 @@ public class TestIssueAPI extends TestBase {
 
     @Test
     void checkIssueByStandardCheck() {
-        apiSteps.standardCheckThatIssueIsCreated(12, ASSIGNEE,
+        apiSteps.standardCheckThatIssueIsCreated(23, ASSIGNEE,
                 TITLE, BUG, DUPLICATE);
     }
 
     @Test
     void checkIssue() {
-        apiSteps.checkThatIssueIsCreated(12, ASSIGNEE,
+        apiSteps.checkThatIssueIsCreated(23, ASSIGNEE,
                 TITLE, BUG, DUPLICATE);
     }
 }

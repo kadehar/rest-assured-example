@@ -7,7 +7,6 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 
 import static com.github.kadehar.filter.LogFilter.filters;
-import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.notNullValue;
 
 /**
@@ -20,8 +19,8 @@ public class CustomSpec {
      * не null.
      */
     private final ResponseSpecification responseSpec = new ResponseSpecBuilder()
-            .expectBody("assignee.login", is(notNullValue()))
-            .expectBody("title", is(notNullValue()))
+            .expectBody("assignee.login", notNullValue())
+            .expectBody("title", notNullValue())
             .build();
 
     /**

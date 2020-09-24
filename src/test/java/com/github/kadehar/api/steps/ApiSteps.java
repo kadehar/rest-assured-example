@@ -13,7 +13,7 @@ public class ApiSteps {
     public Issue requestWithExtractableResponse(final int issue) {
         // @formatter:off
         return
-                spec().request()
+                given().spec(spec().request())
                         .log().uri()
                 .when()
                         .get("issues/{issue}", issue)
@@ -66,7 +66,7 @@ public class ApiSteps {
                                         final String title,
                                         final String... labels) {
         // @formatter:off
-        spec().request()
+        given().spec(spec().request())
                 .log().uri()
         .when()
                 .get("issues/{issue}", issue)
