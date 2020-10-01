@@ -5,8 +5,7 @@ import org.aeonbits.owner.Config;
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
         "system:properties",
-        "classpath:api.properties",
-        "file:~/.token.properties"
+        "classpath:api.properties"
 })
 public interface ApiConfig extends Config {
     @Key("github.api.base.url")

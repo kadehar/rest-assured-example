@@ -15,18 +15,22 @@ targetCompatibility = 1.8
 
 dependencies {
     testCompile(
+            //rest-assured
             "io.qameta.allure:allure-java-commons:2.13.5",
             "io.qameta.allure:allure-rest-assured:2.13.5",
-            "io.rest-assured:rest-assured:4.3.1",
+            "io.rest-assured:rest-assured:4.2.0",
             "com.fasterxml.jackson.core:jackson-databind:2.11.2",
-            "org.junit.jupiter:junit-jupiter-api:5.6.2",
-            "org.junit.jupiter:junit-jupiter-engine:5.6.2",
-            "org.junit.jupiter:junit-jupiter-params:5.6.2",
-            "org.aeonbits.owner:owner:1.0.12",
+            //retrofit
             "com.squareup.retrofit2:retrofit:2.9.0",
             "com.squareup.retrofit2:converter-jackson:2.9.0",
             "io.qameta.allure:allure-okhttp3:2.13.5",
-            "com.squareup.okhttp3:logging-interceptor:3.14.9"
+            "com.squareup.okhttp3:logging-interceptor:3.14.9",
+            //owner
+            "org.aeonbits.owner:owner:1.0.12",
+            //jUnit
+            "org.junit.jupiter:junit-jupiter-api:5.6.2",
+            "org.junit.jupiter:junit-jupiter-engine:5.6.2",
+            "org.junit.jupiter:junit-jupiter-params:5.6.2"
     )
 }
 

@@ -5,7 +5,12 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 
+import java.util.List;
+
 public interface GitHubController {
     @GET("repos/kadehar/qa_guru_course_homework/issues/{issue}")
-    Call<Issue> get(@Path("issue") final int issue);
+    Call<Issue> getIssue(@Path("issue") final int issue);
+
+    @GET("repos/kadehar/qa_guru_course_homework/issues")
+    Call<List<Issue>> getIssues();
 }
