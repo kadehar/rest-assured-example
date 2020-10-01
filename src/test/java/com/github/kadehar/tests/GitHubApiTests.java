@@ -76,4 +76,11 @@ public class GitHubApiTests extends TestBase {
         assertThat(issue.getLabels().get(0).getName(), is(BUG));
         assertThat(issue.getLabels().get(1).getName(), is(DUPLICATE));
     }
+
+    @Test
+    void validateThatIssueIsCreated() {
+        Issue issue = retrofit.createNewIssue();
+
+        assertThat(issue.getLabels().get(0).getName(), is(BUG));
+    }
 }

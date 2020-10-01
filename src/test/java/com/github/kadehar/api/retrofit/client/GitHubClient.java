@@ -1,5 +1,6 @@
 package com.github.kadehar.api.retrofit.client;
 
+import com.github.kadehar.api.model.GitHubBody;
 import com.github.kadehar.api.retrofit.controller.GitHubController;
 import com.github.kadehar.api.model.Issue;
 import com.github.kadehar.config.ConfigHelper;
@@ -26,6 +27,14 @@ public class GitHubClient {
     public List<Issue> getIssues() {
         try {
             return controller.getIssues().execute().body();
+        } catch (IOException e) {
+            return null;
+        }
+    }
+
+    public Issue createNewIssue(final GitHubBody body) {
+        try {
+            return controller.createNewIssue(body).execute().body();
         } catch (IOException e) {
             return null;
         }
